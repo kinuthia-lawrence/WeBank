@@ -1,0 +1,67 @@
+.login_container{
+    -fx-background-color: #f2f2f2;
+}
+/*Logo container Style*/
+.login_logo_container{
+    -fx-background-color: #ff7f50;
+    -fx-alignment: center;
+}
+.login_logo_container Text {
+    -fx-font-size: 2em;
+    -fx-font-weight: bold;
+    -fx-fill: #000000;
+    }
+
+.login_logo_container .ImageView{
+    -fx-fill: white;
+    -fx-font-size: 4em;
+}
+/*Account selector choice box styles*/
+.account_selector {
+-fx-background-color: #ff7f50;
+}
+.account_selector .label{
+    -fx-text-fill: black;
+    -fx-font-size: 1.5em;
+}
+.account_selector .arrow {
+-fx-background-color: white;
+}
+#choice-box-popup .menu{
+    -fx-text-fill: black;
+    -fx-font-size: 1.5em;
+}
+
+/*Login form styles */
+
+#choice-prompt-text {
+    -fx-font-weight: 400;
+}
+.login_form_container{
+    -fx-padding-top: 20;
+    -fx-spacing : 10;
+}
+.login_form_container Label{
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+}
+.login_form_container Button{
+    -fx-font-size: 1.2em;
+    -fx-background-color: #ff7f50;
+    -fx-text-fill: white;
+    -fx-border-color: #ff7f50;
+
+}
+
+.input-field{
+    -fx-font-size: 1.2em;
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #ff7f50;
+}
+
+.error_label {
+    -fx-text-fill: red;
+    -fx-font-size: 1.5em;
+    }

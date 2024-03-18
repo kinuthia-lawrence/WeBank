@@ -2,9 +2,10 @@ module com.larrykin343.webank {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+//    requires javafx.scene.Scene;
 //    requires de.jensd.fx.glyphs.fontawesome;
     requires java.sql;
-//    requires org.xerial.sqlitejdbc;`
+    requires org.xerial.sqlitejdbc;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
