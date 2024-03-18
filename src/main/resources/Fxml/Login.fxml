@@ -33,7 +33,7 @@
             <Label fx:id="Password_label" text="Password" />
             <PasswordField fx:id="Password_field" promptText="Password" styleClass="input-field" />
             <Button fx:id="Login_button" mnemonicParsing="false" prefHeight="34.0" prefWidth="351.0" text="Login" />
-            <Label fx:id="error_label" styleClass="error_label" text="Error:" />
+            <Label fx:id="error_label" alignment="CENTER" prefHeight="27.0" prefWidth="353.0" styleClass="error_label" />
          </children>
       </VBox>
    </children>
