@@ -15,6 +15,7 @@ public class App extends Application {
         stage.setTitle("WeBank");
         Image icon = new Image(getClass().getResourceAsStream("/Images/vision.png"));
         stage.getIcons().add(icon);
+        stage.setResizable(false);
         stage.show();
 
     }
