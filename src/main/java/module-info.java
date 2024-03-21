@@ -2,8 +2,7 @@ module com.larrykin343.webank {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-//    requires javafx.scene.Scene;
-    requires de.jensd.fontawesomefx;
+//    requires de.jensd.fontawesomefx;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
 
@@ -22,5 +21,4 @@ module com.larrykin343.webank {
     exports com.larrykin343.webank.Controller.Client;
     exports com.larrykin343.webank.Models;
     exports com.larrykin343.webank.Views;
-
 }
