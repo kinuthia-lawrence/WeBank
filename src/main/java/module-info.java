@@ -3,7 +3,7 @@ module com.larrykin343.webank {
     requires javafx.fxml;
     requires javafx.web;
 //    requires javafx.scene.Scene;
-//    requires de.jensd.fx.glyphs.fontawesome;
+    requires de.jensd.fontawesomefx;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
 
