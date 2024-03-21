@@ -9,25 +9,20 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0"
-      prefWidth="160.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css"
-      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.larrykin343.webank.Controller.Client.ClientMenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="160.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.larrykin343.webank.Controller.Client.ClientMenuController">
    <AnchorPane prefHeight="750.0" prefWidth="160.0" styleClass="left_container">
-      <VBox prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0"
-            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <VBox prefHeight="400.0" prefWidth="160.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <Button fx:id="dashboardButton" mnemonicParsing="false" text="Dashboard">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/home.png"/>
+                  <Image url="@../../Images/home.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="transactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
-                 text="Transaction">
+         <Button fx:id="transactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Transaction">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/transaction2.png"/>
+                  <Image url="@../../Images/transaction2.png" />
                </ImageView>
             </graphic>
          </Button>
@@ -35,44 +30,40 @@
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@../../Images/round-account-button-with-user-inside.png"/>
+                     <Image url="@../../Images/round-account-button-with-user-inside.png" />
                   </image>
                </ImageView>
             </graphic>
          </Button>
-         <Line endX="100.0"/>
-         <Button fx:id="profileButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false"
-                 styleClass="alt_menu_button" text="Profile">
+         <Line endX="100.0" />
+         <Button fx:id="profileButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" styleClass="alt_menu_button" text="Profile">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/user.png"/>
+                  <Image url="@../../Images/user.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Button fx:id="logoutButton" layoutX="10.0" layoutY="111.0" mnemonicParsing="false"
-                 styleClass="alt_menu_button" text="Logout">
+         <Button fx:id="logoutButton" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" styleClass="alt_menu_button" text="Logout">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/power-off.png"/>
+                  <Image url="@../../Images/power-off.png" />
                </ImageView>
             </graphic>
          </Button>
       </VBox>
-      <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0"
-            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../Images/vision.png"/>
+            <Image url="@../../Images/vision.png" />
          </ImageView>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WEBANK"/>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WEBANK" />
       </VBox>
-      <VBox layoutX="39.0" layoutY="512.0" prefHeight="200.0" prefWidth="100.0" styleClass="report_container"
-            AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?"/>
-         <Label text="Use this to report errors or suggestion"/>
+      <VBox layoutX="39.0" layoutY="512.0" prefHeight="200.0" prefWidth="100.0" styleClass="report_container" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?" />
+         <Label text="Use this to report errors or suggestion" />
          <Button fx:id="reportButton" mnemonicParsing="false" text="Report">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/storage-box.png"/>
+                  <Image url="@../../Images/storage-box.png" />
                </ImageView>
             </graphic>
          </Button>
