@@ -13,10 +13,10 @@
     -fx-family: "Calibri Light";
 }
 /*"Account View"*/
-.account_view{
+.account_view {
     -fx-background-color:#ffffff;
     -fx-background-radius: 10 0 0 10;
-    -fx-padding: 10 0 0 10;
+    -fx-padding: 10 0 10 0;
     -fx-alignment: center;
     -fx-border-width: 0 1 0 0;
     -fx-border-color: #dddddd;
@@ -26,12 +26,16 @@
     -fx-background-radius: 5;
     -fx-effect: dropshadow(three-pass-box, #aaaaaa, 10, 0 , 0 ,10);
 }
+.account VBOX {
+    -fx-background-color: #FFFFFF;
+    -fx-fill: #ffffff;
+}
 .account Text {
     -fx-text-fill: #ffffff;
     -fx-font-family: "Calibri Light";
     -fx-font-size: 1.5em;
 }
-.account_imageView {
+.account Image {
     -fx-fill: #ffffff;
 }
 .account_gradient{
@@ -52,9 +56,6 @@
 .section_title {
     -fx-font-size: 1.4em;
     -fx-font-family: "Calibri Light";
-}
-.account_VBOX {
-    -fx-fill: #ffffff;
 }
 
 /*Account Summary View*/
