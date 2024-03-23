@@ -5,9 +5,12 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="650.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.larrykin343.webank.Controller.Client.TransactionsController">
-   <children>
-      <ListView fx:id="transactionsListView" layoutX="43.0" layoutY="72.0" prefHeight="550.0" prefWidth="730.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0" />
-      <Text layoutX="364.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions" AnchorPane.leftAnchor="364.0" AnchorPane.topAnchor="14.0" />
-   </children>
+<AnchorPane prefHeight="650.0" prefWidth="750.0" styleClass="transactionsContainer"
+            stylesheets="@../../Styles/Transactions.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.larrykin343.webank.Controller.Client.TransactionsController">
+   <ListView fx:id="transactionsListView" layoutX="43.0" layoutY="72.0" prefHeight="550.0" prefWidth="730.0"
+             AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0"/>
+   <Text layoutX="299.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transactions"
+         AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="14.0"/>
 </AnchorPane>
