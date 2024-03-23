@@ -15,7 +15,6 @@ module com.larrykin343.webank {
     requires com.almasb.fxgl.all;
 
     opens com.larrykin343.webank to javafx.fxml;
-//    opens com.larrykin343.webank.Controller.Client. to javafx.fxml;
     exports com.larrykin343.webank;
     exports com.larrykin343.webank.Controller;
     exports com.larrykin343.webank.Controller.Admin;

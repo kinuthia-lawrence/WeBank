@@ -22,7 +22,7 @@
     -fx-spacing: 10;
 }
 .account {
-    -fx-background-radius: 5;
+    -fx-background-radius: 10;
     -fx-effect: dropshadow(three-pass-box, #aaaaaa, 10, 0 , 0 ,10);
 }
 .account VBOX {
@@ -38,7 +38,8 @@
     -fx-fill: #ffffff;
 }
 .account_gradient{
-    -fx-background-color: linear-gradient(to right, #132a13, #253f25);
+   /* -fx-background-color: linear-gradient(to right, #132a13, #253f25);*/
+   -fx-background-color: #ff7f5a;
 }
 .account_balance{
      -fx-text-fill: #ffffff;
