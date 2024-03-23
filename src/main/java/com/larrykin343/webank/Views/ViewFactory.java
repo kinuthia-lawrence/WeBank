@@ -7,6 +7,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class ViewFactory {
     //client view
     private AnchorPane dashboardView;
@@ -36,7 +38,7 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(loginScene);
-        Image icon = new Image(getClass().getResourceAsStream("/Images/vision.png"));
+        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/vision.png")));
         stage.getIcons().add(icon);
         stage.setTitle("WeBank");
         stage.show();
@@ -58,8 +60,15 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
+        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/vision.png")));
+        stage.getIcons().add(icon);
         stage.setTitle("WeBank");
+        stage.setResizable(false);
         stage.show();
+    }
+
+    public void closeStage(Stage stage){
+        stage.close();
     }
 }
 

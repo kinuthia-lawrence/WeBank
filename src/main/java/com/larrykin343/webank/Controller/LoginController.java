@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
@@ -34,7 +35,13 @@ public class LoginController implements Initializable {
         File imageFile = new File("src/main/resources/Images/vision.png");
         Image loginImage = new Image(imageFile.toURI().toString());
         loginImageView.setImage(loginImage);
-        loginButton.setOnAction(event -> Model.getInstance().getViewFactory().showClientWindow());
+        loginButton.setOnAction(event -> onLogin());
+    }
+    public void onLogin(){
+        Model.getInstance().getViewFactory().showClientWindow();
+        //closing the login stage.
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
     }
 
 }
