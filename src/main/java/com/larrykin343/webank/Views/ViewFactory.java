@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
@@ -64,6 +65,7 @@ public class ViewFactory {
         stage.getIcons().add(icon);
         stage.setTitle("WeBank");
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 
