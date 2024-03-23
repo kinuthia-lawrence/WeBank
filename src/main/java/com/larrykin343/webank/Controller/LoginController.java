@@ -1,5 +1,6 @@
 package com.larrykin343.webank.Controller;
 
+import com.larrykin343.webank.Models.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -22,17 +23,18 @@ public class LoginController implements Initializable {
     @FXML
     public Label Password_label;
     @FXML
-    public Button Login_button;
-    @FXML
     public Label error_label;
     @FXML
     public ImageView loginImageView;
+    @FXML
+    public Button loginButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File imageFile = new File("src/main/resources/Images/vision.png");
         Image loginImage = new Image(imageFile.toURI().toString());
         loginImageView.setImage(loginImage);
-//        login_button
+        loginButton.setOnAction(event -> Model.getInstance().getViewFactory().showClientWindow());
     }
+
 }

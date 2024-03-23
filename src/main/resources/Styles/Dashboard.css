@@ -1,6 +1,5 @@
-
 .dashboard {
-    -fx-background-color #eeeeee;
+    -fx-background-color: #eeeeee;
 }
 
 .user_name {
@@ -83,7 +82,7 @@
 }
 .expense_amount {
     -fx-text-fill:#aa0000;
-    -fx-font-family: "Calibri Light"
+    -fx-font-family: "Calibri Light";
     -fx-font-size: 1.5em;
 }
 /*Transactions View*/

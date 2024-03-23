@@ -10,43 +10,43 @@ import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
     @FXML
-    private TextField amountTextField;
+    public TextField amountTextField;
 
     @FXML
-    private Label checkingAccountNumber;
+    public Label checkingAccountNumber;
 
     @FXML
-    private Label checkingBalance;
+    public Label checkingBalance;
 
     @FXML
-    private TextArea descriptionTextField;
+    public TextArea descriptionTextField;
 
     @FXML
-    private Label expensesLabel;
+    public Label expensesLabel;
 
     @FXML
-    private Label incomeLabel;
+    public Label incomeLabel;
 
     @FXML
-    private Label loginDate;
+    public Label loginDate;
 
     @FXML
-    private TextField payeeAddressTextField;
+    public TextField payeeAddressTextField;
 
     @FXML
-    private Label savingsAccountNumber;
+    public Label savingsAccountNumber;
 
     @FXML
-    private Label savingsBalance;
+    public Label savingsBalance;
 
     @FXML
-    private Button sendMoneyButton;
+    public Button sendMoneyButton;
 
     @FXML
-    private ListView<?> transactionListView;
+    public ListView<?> transactionListView;
 
     @FXML
-    private Text usernameLabel;
+    public Text usernameLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -3,6 +3,7 @@ package com.larrykin343.webank.Views;
 import com.larrykin343.webank.Controller.Client.ClientController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -10,7 +11,7 @@ public class ViewFactory {
     //client view
     private AnchorPane dashboardView;
 
-    public ViewFactory(){}
+    public ViewFactory(){};
 
     public AnchorPane getDashboardView(){
         if(dashboardView ==null){
@@ -25,22 +26,24 @@ public class ViewFactory {
     }
 
     public void showLoginWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Fxml/login.fxml"));
-        Scene scene = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+        Scene loginScene = null;
         try{
-            scene = new Scene(loader.load());
+            loginScene = new Scene(loader.load());
         }catch (Exception e){
             e.printStackTrace();
             e.getCause();
         }
         Stage stage = new Stage();
-        stage.setScene(scene);
+        stage.setScene(loginScene);
+        Image icon = new Image(getClass().getResourceAsStream("/Images/vision.png"));
+        stage.getIcons().add(icon);
         stage.setTitle("WeBank");
         stage.show();
     }
 
     public void showClientWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Fxml/Client/Client.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
         ClientController clientController = new ClientController();
         loader.setController(clientController);
         createStage(loader);
