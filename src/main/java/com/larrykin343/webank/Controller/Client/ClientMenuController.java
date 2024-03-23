@@ -24,13 +24,15 @@ public class ClientMenuController implements Initializable {
     private void addListeners() {
         dashboardButton.setOnAction(event -> onDashboard());
         transactionButton.setOnAction(event -> onTransactions());
+        accountsButton.setOnAction(event -> onAccount());
         logoutButton.setOnAction(event -> logoutButtonClicked());
+
     }
 
-    private void logoutButtonClicked() {
-        Stage stage = (Stage) logoutButton.getScene().getWindow();
-        stage.close();
+    private void onAccount() {
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Accounts");
     }
+
 
     private void onTransactions() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Transactions");
@@ -40,6 +42,9 @@ public class ClientMenuController implements Initializable {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Dashboard");
 
     }
-
-
+//! LoginOut the client controller
+    private void logoutButtonClicked() {
+        Stage stage = (Stage) logoutButton.getScene().getWindow();
+        stage.close();
+    }
 }

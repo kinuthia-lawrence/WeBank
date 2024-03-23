@@ -9,10 +9,11 @@
 }
 
 .accounts_view_container VBox {
-    -fx-border-width: 0 0 0 1;
+    -fx-border-width: 0 1 0 1;
     -fx-border-color: #888888;
     -fx-padding: 10;
     -fx-spacing: 15;
+    -fx-border-radius: 30;
 }
 .accounts_view_container VBox Text{
     -fx-font-size: 1.2em;

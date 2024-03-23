@@ -17,15 +17,22 @@ public class ViewFactory {
     private final StringProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionsView;
+    private AnchorPane accountsView;
 
     public ViewFactory(){
         this.clientSelectedMenuItem = new SimpleStringProperty("");
     };
+    /*
+    *  Clients Views Section
+    *  (add fx:id and create injections)declare the anchorPane > create its method > add it to switch in client controller >
+    *  set listener to clientMenu Controller.
+    *  */
 
     public StringProperty getClientSelectedMenuItem() {
         return clientSelectedMenuItem;
     }
 
+    //!Method for getting the dashboard view
     public AnchorPane getDashboardView(){
         if(dashboardView ==null){
             try {
@@ -37,6 +44,8 @@ public class ViewFactory {
         }
         return dashboardView;
     }
+
+//?    method for getting the transaction view
 
     public AnchorPane getTransactionsView() {
         if(transactionsView == null){
@@ -50,6 +59,21 @@ public class ViewFactory {
         return transactionsView;
     }
 
+//*   method for getting the accounts view
+    public AnchorPane getAccountsView(){
+        if(accountsView == null) {
+            try {
+                accountsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Accounts.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+            }
+        }
+        return accountsView;
+    }
+
+
+    /*  getting Login Window*/
     public void showLoginWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
         Scene loginScene = null;
@@ -67,6 +91,7 @@ public class ViewFactory {
         stage.show();
     }
 
+    /*Getting Clients window*/
     public void showClientWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
         ClientController clientController = new ClientController();
@@ -91,6 +116,7 @@ public class ViewFactory {
         stage.show();
     }
 
+    /* method to close login stage*/
     public void closeStage(Stage stage){
         stage.close();
     }
