@@ -23,7 +23,7 @@ public class ViewFactory {
     };
 
     public StringProperty getClientSelectedMenuItem() {
-        return clientSelectedMenuItem.get();
+        return clientSelectedMenuItem;
     }
 
     public AnchorPane getDashboardView(){
@@ -41,7 +41,7 @@ public class ViewFactory {
     public AnchorPane getTransactionsView() {
         if(transactionsView == null){
             try{
-                transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Clint/Transactions.fxml")).load();
+                transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
             }catch (Exception e){
                 e.printStackTrace();
                 e.getCause();
