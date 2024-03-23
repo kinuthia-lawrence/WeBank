@@ -25,7 +25,7 @@
     -fx-background-radius: 10;
     -fx-effect: dropshadow(three-pass-box, #aaaaaa, 10, 0 , 0 ,10);
 }
-.account VBOX {
+.account VBox {
     -fx-background-color: #FFFFFF;
     -fx-fill: #ffffff;
 }
@@ -34,7 +34,7 @@
     -fx-font-family: "Calibri Light";
     -fx-font-size: 1.5em;
 }
-.account Image {
+.account ImageView {
     -fx-fill: #ffffff;
 }
 .account_gradient{
