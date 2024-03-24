@@ -12,44 +12,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="650.0" prefWidth="750.0" styleClass="deposit_container" stylesheets="@../../Styles/Deposit.css"
-            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.larrykin343.webank.Controller.Admin.DepositController">
-   <VBox layoutX="117.0" layoutY="111.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.leftAnchor="25.0"
-         AnchorPane.topAnchor="25.0">
+<AnchorPane prefHeight="650.0" prefWidth="750.0" styleClass="deposit_container" stylesheets="@../../Styles/Deposit.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.larrykin343.webank.Controller.Admin.DepositController">
+   <VBox layoutX="117.0" layoutY="111.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
       <HBox alignment="CENTER" prefHeight="80.0" prefWidth="700.0">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search by Payee Address:"
-               wrappingWidth="210.4344024658203"/>
-         <TextField fx:id="searchTextField" prefHeight="36.0" prefWidth="222.0" promptText="\@payeeAddress"
-                    styleClass="search_box">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search by Payee Address:" wrappingWidth="210.4344024658203" />
+         <TextField fx:id="searchTextField" prefHeight="36.0" prefWidth="222.0" promptText="\@payeeAddress" styleClass="search_box">
             <HBox.margin>
-               <Insets right="5.0"/>
+               <Insets right="5.0" />
             </HBox.margin>
          </TextField>
          <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="128.0" text="Search">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/home.png"/>
+                  <Image url="@../../Images/home.png" />
                </ImageView>
             </graphic>
          </Button>
       </HBox>
       <ListView fx:id="resultListView" prefHeight="200.0" prefWidth="700.0">
          <styleClass>
-            <String fx:value="list-cell"/>
-            <String fx:value="list-view"/>
+            <String fx:value="list-cell" />
+            <String fx:value="list-view" />
          </styleClass>
       </ListView>
-      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="320.0" prefWidth="700.0"
-            styleClass="deposit_box">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Section"/>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Amount:"/>
-         <TextField fx:id="depositAmountTextField"/>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="320.0" prefWidth="700.0" styleClass="deposit_box">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Section" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Amount:" />
+         <TextField fx:id="depositAmountTextField" />
          <Button fx:id="depositButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="143.0" text="Deposit">
             <graphic>
                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../../Images/home.png"/>
+                  <Image url="@../../Images/home.png" />
                </ImageView>
             </graphic>
          </Button>
