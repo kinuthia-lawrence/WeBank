@@ -2,8 +2,8 @@ package com.larrykin343.webank.Views;
 
 import com.larrykin343.webank.Controller.Admin.AdminController;
 import com.larrykin343.webank.Controller.Client.ClientController;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -15,19 +15,19 @@ import java.util.Objects;
 
 public class ViewFactory {
     //!client view
-    private final StringProperty clientSelectedMenuItem;
+    private final ObjectProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
 
     //! Admin view
-    private final StringProperty adminSelectedMenuItem;
+    private final ObjectProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
 
 
     public ViewFactory(){
-        this.adminSelectedMenuItem = new SimpleStringProperty("");
-        this.clientSelectedMenuItem = new SimpleStringProperty("");
+        this.adminSelectedMenuItem = new SimpleObjectProperty();
+        this.clientSelectedMenuItem = new SimpleObjectProperty();
     };
 
 
@@ -37,7 +37,7 @@ public class ViewFactory {
     *  set listener to clientMenu Controller.
     *  */
 
-    public StringProperty getClientSelectedMenuItem() {
+    public ObjectProperty<ClientMenuOptions> getClientSelectedMenuItem() {
         return clientSelectedMenuItem;
     }
 
@@ -115,7 +115,7 @@ public class ViewFactory {
      * listeners to adminMenuController
      * */
 
-    public StringProperty getAdminSelectedMenuItem() {
+    public ObjectProperty<AdminMenuOptions> getAdminSelectedMenuItem() {
         return adminSelectedMenuItem;
     }
 

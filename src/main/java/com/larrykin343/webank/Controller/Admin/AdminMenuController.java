@@ -1,6 +1,7 @@
 package com.larrykin343.webank.Controller.Admin;
 
 import com.larrykin343.webank.Models.Model;
+import com.larrykin343.webank.Views.AdminMenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -28,15 +29,15 @@ public class AdminMenuController implements Initializable {
 
 //! Onclick methods
     private void createClientsButtonClicked() {
-        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set("CreateClient");
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CREATE_CLIENT);
     }
 
     private void depositButtonClicked() {
-        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set("Deposit");
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DEPOSIT);
     }
 
     private void clientsButtonClicked() {
-        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set("Clients");
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CLIENTS);
     }
 
     private void logoutButtonClicked() {
