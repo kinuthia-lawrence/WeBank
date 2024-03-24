@@ -24,6 +24,8 @@ public class ViewFactory {
     //! Admin view
     private final ObjectProperty adminSelectedMenuItem;
     private AnchorPane createClientView;
+    private AnchorPane clientView;
+    private AnchorPane depositView;
 
 
     public ViewFactory(){
@@ -39,9 +41,9 @@ public class ViewFactory {
     public void setLoginAccountType(AccountType loginAccountType) {
         this.loginAccountType = loginAccountType;
     }
-    /*
-    *  Clients Views Section
-    *  (add fx:id and create injections)declare the anchorPane > create its method > add it to switch in client controller >
+
+    //! Clients Views Section
+    /*  (add fx:id and create injections)declare the anchorPane > create its method > add it to switch in client controller >
     *  set listener to clientMenu Controller.
     *  */
 
@@ -116,7 +118,7 @@ public class ViewFactory {
         createStage(loader);
     }
 
-    //? Admin Views Section
+    //! Admin Views Section
     /*
      * create showAdminWindow method,change admin.fxml stage to bolder pane,add adminMenu to left and createClint to center,in viewFactory, declare admin
      * views(anchorPane createClientView,StingProperty adminSelectedMenuItem),create Views,create a listener and switch(TODO) in adminController,add
@@ -146,6 +148,29 @@ public class ViewFactory {
         return createClientView;
     }
 
+    public AnchorPane getClientView() {
+        if(clientView == null){
+            try{
+                clientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Clients.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+                e.getCause();
+            }
+        }
+        return clientView;
+    }
+
+    public AnchorPane getDepositView() {
+        if(depositView == null){
+            try {
+                depositView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Deposit.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+                e.getCause();
+            }
+        }
+        return depositView;
+    }
 
     //! Creating the stage
     private void createStage(FXMLLoader loader) {

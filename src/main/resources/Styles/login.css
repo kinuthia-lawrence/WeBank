@@ -21,7 +21,7 @@
 -fx-background-color: #ff7f50;
 }
 .account_selector .label{
-    -fx-text-fill: black;
+    -fx-text-fill: #d3d3d3;
     -fx-font-size: 1.5em;
 }
 .account_selector .arrow {
