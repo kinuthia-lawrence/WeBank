@@ -1,0 +1,27 @@
+.client_cell_container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, #dddddd, 5,0,0,7);
+}
+.client_cell_container HBox{
+    -fx-alignment: Center_left;
+    -fx-spacing: 15;
+}
+.client_cell_container HBox Label {
+    -fx-font-size: 1.6em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #444444;
+}
+.account_display_label{
+    -fx-font-size: 1.1em;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+}
+
+.delete_button {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #ff0000;
+}
+.delete_button:hover {
+    -fx-cursor: hand;
+}
