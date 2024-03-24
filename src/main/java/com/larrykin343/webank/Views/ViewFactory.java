@@ -1,5 +1,6 @@
 package com.larrykin343.webank.Views;
 
+import com.larrykin343.webank.Controller.Admin.AdminController;
 import com.larrykin343.webank.Controller.Client.ClientController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -13,15 +14,23 @@ import javafx.stage.StageStyle;
 import java.util.Objects;
 
 public class ViewFactory {
-    //client view
+    //!client view
     private final StringProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
 
+    //! Admin view
+    private final StringProperty adminSelectedMenuItem;
+    private AnchorPane createClientView;
+
+
     public ViewFactory(){
+        this.adminSelectedMenuItem = new SimpleStringProperty("");
         this.clientSelectedMenuItem = new SimpleStringProperty("");
     };
+
+
     /*
     *  Clients Views Section
     *  (add fx:id and create injections)declare the anchorPane > create its method > add it to switch in client controller >
@@ -32,7 +41,7 @@ public class ViewFactory {
         return clientSelectedMenuItem;
     }
 
-    //!Method for getting the dashboard view
+//? Method for getting the dashboard view
     public AnchorPane getDashboardView(){
         if(dashboardView ==null){
             try {
@@ -59,7 +68,7 @@ public class ViewFactory {
         return transactionsView;
     }
 
-//*   method for getting the accounts view
+//?   method for getting the accounts view
     public AnchorPane getAccountsView(){
         if(accountsView == null) {
             try {
@@ -98,6 +107,39 @@ public class ViewFactory {
         loader.setController(clientController);
         createStage(loader);
     }
+
+    //? Admin Views Section
+    /*
+     * create showAdminWindow method,change admin.fxml stage to bolder pane,add adminMenu to left and createClint to center,in viewFactory, declare admin
+     * views(anchorPane createClientView,StingProperty adminSelectedMenuItem),create Views,create a listener and switch(TODO) in adminController,add
+     * listeners to adminMenuController
+     * */
+
+    public StringProperty getAdminSelectedMenuItem() {
+        return adminSelectedMenuItem;
+    }
+
+    public void showAdminWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
+        AdminController adminController = new AdminController();
+        loader.setController(adminController);
+        createStage(loader);
+    }
+
+    public AnchorPane getCreateClientView() {
+        if(createClientView == null){
+            try{
+                createClientView = new FXMLLoader(getClass().getResource("/Fxml/Admin/CreateClient.fxml")).load();
+            }catch (Exception e){
+                e.printStackTrace();
+                e.getCause();
+            }
+        }
+        return createClientView;
+    }
+
+
+    //! Creating the stage
     private void createStage(FXMLLoader loader) {
         Scene scene = null;
         try{
@@ -115,11 +157,10 @@ public class ViewFactory {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
-    /*
-    * gettting Admin window
-    * */
 
-    /* method to close login stage*/
+
+
+    //! method to close login stage
     public void closeStage(Stage stage){
         stage.close();
     }
