@@ -115,6 +115,9 @@ public class ViewFactory {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
+    /*
+    * gettting Admin window
+    * */
 
     /* method to close login stage*/
     public void closeStage(Stage stage){
