@@ -14,6 +14,8 @@
     -fx-padding: 10;
     -fx-spacing: 15;
     -fx-border-radius: 30;
+    -fx-background-color: #d3d3d3;
+    -fx-background-radius: 30;
 }
 .accounts_view_container VBox Text{
     -fx-font-size: 1.2em;
