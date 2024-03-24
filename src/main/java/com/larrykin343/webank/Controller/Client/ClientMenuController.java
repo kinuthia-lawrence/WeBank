@@ -45,6 +45,7 @@ public class ClientMenuController implements Initializable {
     }
 //! LoginOut the client controller
     private void logoutButtonClicked() {
+        Model.getInstance().getViewFactory().showLoginWindow();
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         stage.close();
     }

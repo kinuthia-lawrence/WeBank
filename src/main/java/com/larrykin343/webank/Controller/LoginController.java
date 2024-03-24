@@ -1,6 +1,8 @@
 package com.larrykin343.webank.Controller;
 
 import com.larrykin343.webank.Models.Model;
+import com.larrykin343.webank.Views.AccountType;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -16,7 +18,7 @@ public class LoginController implements Initializable {
     @FXML
     public Label payment_address_label;
     @FXML
-    public ChoiceBox acc_selector;
+    public ChoiceBox<AccountType> acc_selector;
     @FXML
     public TextField payment_address_field;
     @FXML
@@ -32,13 +34,23 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //?setting the image for the login page
         File imageFile = new File("src/main/resources/Images/vision.png");
         Image loginImage = new Image(imageFile.toURI().toString());
         loginImageView.setImage(loginImage);
+        //?setting the account type
+        acc_selector.setItems(FXCollections.observableArrayList(AccountType.CLIENT, AccountType.ADMIN));
+        acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
+        acc_selector.valueProperty().addListener(observableValue -> Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue()));
         loginButton.setOnAction(event -> onLogin());
     }
     public void onLogin(){
-        Model.getInstance().getViewFactory().showClientWindow();
+        if(Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT){
+            Model.getInstance().getViewFactory().showClientWindow();
+        }else{
+            Model.getInstance().getViewFactory().showAdminWindow();
+        }
+
         //closing the login stage.
         Stage stage = (Stage) loginButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);

@@ -41,6 +41,7 @@ public class AdminMenuController implements Initializable {
     }
 
     private void logoutButtonClicked() {
+        Model.getInstance().getViewFactory().showLoginWindow();
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         stage.close();
     }

@@ -14,6 +14,7 @@ import javafx.stage.StageStyle;
 import java.util.Objects;
 
 public class ViewFactory {
+    private AccountType loginAccountType;
     //!client view
     private final ObjectProperty clientSelectedMenuItem;
     private AnchorPane dashboardView;
@@ -26,11 +27,18 @@ public class ViewFactory {
 
 
     public ViewFactory(){
+        this.loginAccountType = AccountType.CLIENT;
         this.adminSelectedMenuItem = new SimpleObjectProperty();
         this.clientSelectedMenuItem = new SimpleObjectProperty();
     };
 
+    public AccountType getLoginAccountType() {
+        return loginAccountType;
+    }
 
+    public void setLoginAccountType(AccountType loginAccountType) {
+        this.loginAccountType = loginAccountType;
+    }
     /*
     *  Clients Views Section
     *  (add fx:id and create injections)declare the anchorPane > create its method > add it to switch in client controller >
