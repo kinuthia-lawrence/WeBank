@@ -7,27 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="50.0" prefWidth="750.0" styleClass="client_cell_container" stylesheets="@../../Styles/ClientCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.larrykin343.webank.Controller.Client.ClientCellController">
-   <ImageView fx:id="receivedIcon" fitHeight="24.0" fitWidth="24.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
-      <image>
-         <Image url="@../../Images/arrow.png" />
-      </image>
+<AnchorPane prefHeight="50.0" prefWidth="750.0"
+            styleClass="client_cell_container"
+            stylesheets="@../../Styles/ClientCell.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <ImageView fx:id="receivedIcon" fitHeight="24.0" fitWidth="24.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true"
+              preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <Image url="@../../Images/arrow.png"/>
    </ImageView>
-   <HBox layoutX="62.0" layoutY="-50.0" prefHeight="40.0" prefWidth="550.0" AnchorPane.leftAnchor="60.0"
-         AnchorPane.topAnchor="5.0">
-      <Label fx:id="firstNameLabel" text="Larry"/>
-      <Label fx:id="lastNameLabel" layoutX="10.0" layoutY="10.0" text="kin"/>
-      <Label fx:id="payeeAddressLabel" layoutX="38.0" layoutY="10.0" text="\@kin1"/>
-      <Label fx:id="checkingAccountNumberLabel" layoutX="66.0" layoutY="10.0" styleClass="account_display_label"
-             stylesheets="@../../Styles/ClientCell.css" text="12345678"/>
-      <Label fx:id="savingAccountNumberLabel" layoutX="94.0" layoutY="10.0" styleClass="account_display_label"
-             text="87654321"/>
-      <Label fx:id="dateCreated" layoutX="122.0" layoutY="10.0" text="2024-03-25"/>
+   <HBox layoutX="62.0" layoutY="-50.0" prefHeight="40.0" prefWidth="550.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="5.0">
+      <Label fx:id="firstNameLabel" text="Larry" />
+      <Label fx:id="lastNameLabel" layoutX="10.0" layoutY="10.0" text="kin" />
+      <Label fx:id="payeeAddressLabel" layoutX="38.0" layoutY="10.0" text="\@kin1" />
+      <Label fx:id="checkingAccountNumberLabel" layoutX="66.0" layoutY="10.0" styleClass="account_display_label" stylesheets="@../../Styles/ClientCell.css" text="12345678" />
+      <Label fx:id="savingAccountNumberLabel" layoutX="94.0" layoutY="10.0" styleClass="account_display_label" text="87654321" />
+      <Label fx:id="dateCreated" layoutX="122.0" layoutY="10.0" text="2024-03-25" />
    </HBox>
    <Button fx:id="deleteButton" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" styleClass="delete_button" text="Delete" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
       <graphic>
          <ImageView fx:id="receivedIcon1" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../Images/arrow.png"/>
+            <Image url="@../../Images/arrow.png" />
          </ImageView>
       </graphic>
    </Button>
